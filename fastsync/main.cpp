@@ -5,8 +5,11 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
+    QCoreApplication::setApplicationName("fastsync");
+    QCoreApplication::setApplicationVersion("1.0.0");
 
     FastSync fastsync;
+    fastsync.parseCommandLine(&app);
 
     // connect up the signals
     QObject::connect(&fastsync, SIGNAL(finished()), &app, SLOT(quit()));
