@@ -1,3 +1,6 @@
+#qt build system
+build*
+
 # Prerequisites
 *.d
 
