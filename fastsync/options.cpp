@@ -14,10 +14,9 @@ bool Options::parse(QCoreApplication* app){
     parser.addVersionOption();
 
     parser.addOptions({
-                          // A boolean option with a single name (-p)
-                          {"j",QCoreApplication::translate("main", "Parallelism")},
-                          // A boolean option with multiple names (-f, --force)
-                          {{"f", "file"},QCoreApplication::translate("main", "Use Repo File")},
+                          {{"j","parallelism"},QCoreApplication::translate("main", "Parallelism - number of threads")},
+                          {{"f", "file"},QCoreApplication::translate("main", "Use Yum Repo File")},
+                          {{"r", "repoid"},QCoreApplication::translate("main", "repoid to sync")},
                       });
 
     parser.showHelp();
