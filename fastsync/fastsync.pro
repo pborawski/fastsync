@@ -1,4 +1,5 @@
 QT -= gui
+QT += network core
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
@@ -16,8 +17,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp \
     fastsync.cpp \
-    options.cpp
+    options.cpp \
+    downloadmanager.cpp
 
 HEADERS += \
     fastsync.h \
-    options.h
+    options.h \
+    downloadmanager.h
